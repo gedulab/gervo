@@ -30,11 +30,15 @@ int main(int argc, const char* argv[])
 	printf("&c = %p\n", &c);
 	
 	c = get_city(argv[0][1]);
-	
+
+        printf("&c = %p, city name %s (@%p) zip %d(@%p) \n", &c, c.name, c.name, c.zip, &c.zip);
+
 	printf("experiments on returning struct in c.(%d, %s)\n", argc, argv[0]);
-	
-	printf("&c = %p, city name %s (@%p) zip %d(@%p) \n", &c, c.name, c.name, c.zip, &c.zip);
+
+	CITY c2 = get_city(argv[0][2]);
+
+	printf("&c2 = %p, city name %s (@%p) zip %d(@%p) \n", &c2, c2.name, c2.name, c2.zip, &c2.zip);
 		
-	return c.zip;
+	return c.zip + c2.zip;
 }
 
