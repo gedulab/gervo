@@ -3,7 +3,7 @@ case study of returning struct in C
 
 
 code generted by GCC in YourLand code book based on rk3588 SoC:
-
+```
    0x0000005555550988 <+60>:    mov     w0, #0x1                        // #1
    0x000000555555098c <+64>:    bl      0x55555506e0 <__printf_chk@plt>
    0x0000005555550990 <+68>:    ldr     x0, [x21]
@@ -41,5 +41,7 @@ COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper
 Target: aarch64-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Ubuntu 12.3.0-1ubuntu1~23.04' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu
 Thread model: posix
+
+```
 Supported LTO compression algorithms: zlib zstd
 gcc version 12.3.0 (Ubuntu 12.3.0-1ubuntu1~23.04)
