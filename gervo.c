@@ -17,8 +17,8 @@ CITY get_city(int z)
 	
 	city.zip = z;
 	city.gdp = 0xfeedfeed;
-	strcpy(city.name, "naning is huge city with very loooooooooooooooooooooooooooooooooooooong name\n");
-	printf("&n1 = %p, &city= %p &n2=%p &city.zip = %p, city.name = %p\n", &n1, &city, &n2, &city.zip, city.name);
+	strcpy(city.name, "nanjing is a city with very loooooooooooooooooooooooooooooooooooooong history\n");
+	printf("get_city: &n1 = %p, &city= %p &n2=%p &city.zip = %p, city.name = %p\n", &n1, &city, &n2, &city.zip, city.name);
 		
 	return city;
 }
@@ -31,13 +31,13 @@ int main(int argc, const char* argv[])
 	
 	c = get_city(argv[0][1]);
 
-        printf("&c = %p, city name %s (@%p) zip %d(@%p) \n", &c, c.name, c.name, c.zip, &c.zip);
+        printf("main: &c = %p, city name %s (@%p) zip %d(@%p) \n", &c, c.name, c.name, c.zip, &c.zip);
 
-	printf("experiments on returning struct in c.(%d, %s)\n", argc, argv[0]);
+	printf("main: experiments on returning struct in c.(%d, %s)\n", argc, argv[0]);
 
 	CITY c2 = get_city(argv[0][2]);
 
-	printf("&c2 = %p, city name %s (@%p) zip %d(@%p) \n", &c2, c2.name, c2.name, c2.zip, &c2.zip);
+	printf("main: &c2 = %p, city name %s (@%p) zip %d(@%p) \n", &c2, c2.name, c2.name, c2.zip, &c2.zip);
 		
 	return c.zip + c2.zip;
 }
